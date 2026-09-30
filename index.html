@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imprimerie Lina — Grombalia</title>
+<meta name="description" content="Imprimerie Lina à Grombalia — impression, flyers, cartes de visite, affiches et supports personnalisés. Contactez-nous sur WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12151b;--muted:#68707d;--paper:#f7f4ee;--white:#fff;--lime:#d9ff45;--purple:#7157ff;--line:#dedbd3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Space Grotesk";font-size:28px;font-weight:700;letter-spacing:-1.5px}
+.logo span{display:inline-block;background:var(--lime);padding:0 7px;border-radius:7px;transform:rotate(-3deg)}
+.navlinks{display:flex;gap:28px;font-size:14px;font-weight:600}
+.navcta{background:var(--ink);color:white;padding:11px 17px;border-radius:999px}
+.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center;padding:50px 0 80px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:13px;margin-bottom:20px}
+.dot{width:9px;height:9px;background:#35c96b;border-radius:50%;box-shadow:0 0 0 5px #35c96b22}
+h1{font-family:"Space Grotesk";font-size:clamp(52px,7vw,88px);line-height:.93;letter-spacing:-5px;max-width:720px}
+h1 em{font-style:normal;color:var(--purple)}
+.hero p{color:var(--muted);font-size:18px;max-width:570px;margin:28px 0}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:15px 21px;border-radius:13px;font-weight:700;display:inline-flex;align-items:center;gap:9px}
+.primary{background:var(--ink);color:#fff}
+.whatsapp{background:#25D366;color:#fff}
+.secondary{border:1px solid var(--ink)}
+.hero-art{position:relative;min-height:470px}
+.sheet{position:absolute;inset:30px 15px 15px 30px;background:#fff;border:1px solid #ddd8cc;border-radius:24px;box-shadow:20px 25px 60px #1b1b1b18;transform:rotate(4deg);padding:28px;overflow:hidden}
+.sheet:before{content:"LINA";font-family:"Space Grotesk";font-size:110px;font-weight:700;letter-spacing:-8px;position:absolute;top:90px;left:25px;color:#eee8db;transform:rotate(-90deg)}
+.card{position:absolute;background:var(--purple);color:white;border-radius:20px;width:270px;height:175px;right:0;top:15px;padding:25px;transform:rotate(-8deg);box-shadow:15px 20px 40px #7157ff33}
+.card b{font-family:"Space Grotesk";font-size:32px}
+.poster{position:absolute;background:var(--lime);width:250px;height:310px;left:15px;bottom:0;border-radius:16px;padding:25px;transform:rotate(-7deg);box-shadow:15px 20px 40px #0002}
+.poster h3{font-family:"Space Grotesk";font-size:45px;line-height:.88;letter-spacing:-3px;margin-top:60px}
+.badge{position:absolute;right:35px;bottom:35px;background:var(--ink);color:#fff;border-radius:50%;width:115px;height:115px;display:grid;place-items:center;text-align:center;font-size:13px;font-weight:700;transform:rotate(9deg)}
+.marquee{background:var(--ink);color:white;overflow:hidden;white-space:nowrap;padding:15px 0;font-family:"Space Grotesk";font-size:18px}
+.marquee span{margin-right:45px;color:var(--lime)}
+.section{padding:100px 0}
+.sectionhead{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}
+.section h2{font-family:"Space Grotesk";font-size:clamp(38px,5vw,62px);line-height:.95;letter-spacing:-3px}
+.sectionhead p{max-width:400px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;min-height:235px;transition:.25s}
+.service:hover{transform:translateY(-6px);box-shadow:0 20px 40px #0000000d}
+.icon{font-size:32px;margin-bottom:45px}
+.service h3{font-family:"Space Grotesk";font-size:24px;margin-bottom:8px}
+.service p{color:var(--muted);font-size:14px}
+.about{background:var(--ink);color:#fff;border-radius:30px;padding:55px;display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.about h2{font-family:"Space Grotesk";font-size:50px;line-height:.95;letter-spacing:-3px}
+.about p{color:#b9bec8;margin-top:15px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fact{border:1px solid #ffffff22;border-radius:16px;padding:22px}
+.fact strong{display:block;font-size:24px;color:var(--lime);margin-bottom:5px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contactcard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px}
+.contactcard h3{font-family:"Space Grotesk";font-size:25px;margin-bottom:12px}
+.contactcard p{color:var(--muted)}
+.contactcard .big{display:block;font-size:27px;font-weight:700;margin:12px 0 20px}
+.mapbox{min-height:280px;border-radius:22px;background:linear-gradient(135deg,#ddd8cc,#eeeae2);display:grid;place-items:center;position:relative;overflow:hidden}
+.mapbox:before{content:"";position:absolute;width:180%;height:180%;background:repeating-linear-gradient(25deg,transparent 0 32px,#ffffff66 33px 35px);transform:rotate(-8deg)}
+.maplabel{position:relative;background:white;border-radius:15px;padding:18px 22px;box-shadow:0 12px 30px #0002;text-align:center}
+.maplabel b{display:block;font-family:"Space Grotesk";font-size:22px}
+footer{padding:30px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+@media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:30px}.hero-art{min-height:410px}.grid,.contact,.about{grid-template-columns:1fr}.about{padding:35px}.sectionhead{display:block}.sectionhead p{margin-top:18px}.facts{margin-top:20px}h1{letter-spacing:-3px}}
+</style>
+</head>
+<body>
+<header class="container">
+<nav>
+  <a class="logo" href="#">imprimerie <span>Lina</span></a>
+  <div class="navlinks">
+    <a href="#services">Services</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+    <a class="navcta" href="https://wa.me/21658073203" target="_blank">WhatsApp ↗</a>
+  </div>
+</nav>
+</header>
+
+<main>
+<section class="container hero">
+  <div>
+    <div class="eyebrow"><i class="dot"></i> Ouvert aujourd’hui · Ferme à 22:00</div>
+    <h1>On imprime vos <em>idées.</em></h1>
+    <p>Bienvenue chez <strong>Imprimerie Lina</strong>, votre adresse à Grombalia pour des impressions soignées, rapides et personnalisées.</p>
+    <div class="buttons">
+      <a class="btn whatsapp" href="https://wa.me/21658073203?text=Bonjour%20Imprimerie%20Lina%2C%20je%20souhaite%20avoir%20des%20informations." target="_blank">💬 Commander sur WhatsApp</a>
+      <a class="btn secondary" href="#services">Découvrir nos services ↓</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="sheet"></div>
+    <div class="card"><small>PRINT • CREATE • REPEAT</small><br><b>LINA</b><br>Imprimerie</div>
+    <div class="poster"><small>VOTRE PROJET</small><h3>EN<br>GRAND.</h3></div>
+    <div class="badge">GROMBALIA<br>8032<br>★</div>
+  </div>
+</section>
+
+<div class="marquee"><span>IMPRESSION</span> FLYERS · CARTES DE VISITE · AFFICHES · DOCUMENTS · SUPPORTS PERSONNALISÉS · <span>IMPRESSION</span> RAPIDE & SOIGNÉE ·</div>
+
+<section id="services" class="container section">
+  <div class="sectionhead">
+    <h2>Tout ce qu’il<br>faut pour <em>imprimer.</em></h2>
+    <p>Des supports professionnels pour votre entreprise, vos événements, vos projets personnels et vos besoins du quotidien.</p>
+  </div>
+  <div class="grid">
+    <article class="service"><div class="icon">▣</div><h3>Cartes de visite</h3><p>Présentez votre activité avec une carte professionnelle et mémorable.</p></article>
+    <article class="service"><div class="icon">▤</div><h3>Flyers & affiches</h3><p>Donnez de la visibilité à vos promotions, événements et communications.</p></article>
+    <article class="service"><div class="icon">◫</div><h3>Documents</h3><p>Impressions de documents et supports pour vos besoins professionnels ou personnels.</p></article>
+    <article class="service"><div class="icon">✦</div><h3>Création personnalisée</h3><p>Un support adapté à votre identité, votre message et votre projet.</p></article>
+    <article class="service"><div class="icon">▧</div><h3>Supports marketing</h3><p>Des impressions pensées pour mettre votre marque en avant.</p></article>
+    <article class="service"><div class="icon">+</div><h3>Votre projet</h3><p>Vous avez une demande spécifique ? Écrivez-nous directement sur WhatsApp.</p></article>
+  </div>
+</section>
+
+<section id="apropos" class="container section">
+  <div class="about">
+    <div><h2>Votre projet.<br>Notre impression.</h2><p>Imprimerie Lina vous accueille à Grombalia avec une approche simple : comprendre votre besoin, préparer votre support et vous accompagner jusqu’au résultat.</p></div>
+    <div class="facts">
+      <div class="fact"><strong>22:00</strong>Heure de fermeture indiquée</div>
+      <div class="fact"><strong>Grombalia</strong>Délégation · 8032</div>
+      <div class="fact"><strong>58 073 203</strong>Téléphone / WhatsApp</div>
+      <div class="fact"><strong>Lina</strong>Imprimerie locale</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container section">
+  <div class="sectionhead"><h2>Parlons de<br>votre <em>projet.</em></h2><p>Une question, un devis ou une commande ? Le plus simple est de nous contacter sur WhatsApp.</p></div>
+  <div class="contact">
+    <div class="contactcard">
+      <h3>WhatsApp & téléphone</h3>
+      <a class="big" href="tel:+21658073203">58 073 203</a>
+      <p>Disponible pour vos demandes et commandes.</p>
+      <a class="btn whatsapp" style="margin-top:20px" href="https://wa.me/21658073203?text=Bonjour%20Imprimerie%20Lina%2C%20je%20souhaite%20demander%20un%20devis." target="_blank">Ouvrir WhatsApp ↗</a>
+    </div>
+    <div class="mapbox">
+      <div class="maplabel"><b>Imprimerie Lina</b>Grombalia · 8032<br><small>HGW2+3C Grombalia</small></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="container">
+  <span>© 2026 Imprimerie Lina</span>
+  <span>Grombalia, Tunisie · 58 073 203</span>
+</footer>
+</body>
+</html>
